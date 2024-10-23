@@ -4,7 +4,7 @@ public class GridPath {
      */
     private int[][] grid;
 
-    public gridPath(int[][] values)
+    public GridPath(int[][] values)
     {
         grid = values;
     }
@@ -18,7 +18,23 @@ public class GridPath {
     public Location getNextLoc(int row, int col) {
         /* to be implemented in part (a) */
         Location start = new Location(row, col);
-        if (grid[start.getRow()+1][start.getCol()+1] < )
+        Location toRight = new Location(row, col+1);
+        Location toBottom = new Location(row+1, col);
+
+        if (col == grid[0].length){
+            return toBottom;
+        }
+        else if ()
+        {
+
+        }
+        else if (grid[toRight.getRow()][toRight.getCol()] < grid[toBottom.getRow()][toBottom.getCol()]){
+            return toRight;
+        }
+        else
+        {
+            return toBottom
+        }
 
     }
 
