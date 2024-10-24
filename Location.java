@@ -15,4 +15,8 @@ public class Location {
         return theCol;
     }
 
+    public String toString()
+    {
+        return theRow + ", " + theCol;
+    }
 }

@@ -21,19 +21,24 @@ public class GridPath {
         Location toRight = new Location(row, col+1);
         Location toBottom = new Location(row+1, col);
 
-        if (col == grid[0].length){
+        if(row == grid.length && col == grid[0].length)
+        {
+            return start;
+        }
+        else if (col == grid[0].length-1){
             return toBottom;
         }
-        else if ()
+        else if (row == grid.length-1)
         {
-
+            return toRight;
         }
+
         else if (grid[toRight.getRow()][toRight.getCol()] < grid[toBottom.getRow()][toBottom.getCol()]){
             return toRight;
         }
         else
         {
-            return toBottom
+            return toBottom;
         }
 
     }
@@ -44,20 +49,8 @@ public class GridPath {
      * Preconditions: row is a valid row index and col is a valid column index in grid.
      * row and col do not specify the element in the last row and last column of grid.
      */
-    public int sumPath(int row, int col) { /* to be implemented in part (b) */ }
+//    public int sumPath(int row, int col) { /* to be implemented in part (b) */ }
 
-    public String toString()
-    {
-        String s = "";
-        for (int row = 0; row< grid.length; row++)
-        {
-            for (int col = 0; col < grid[0].length; col++)
-            {
-                s += grid[row][col] + "";
-            }
-            s += "/n";
-        }
-        return s;
-    }
+
 
 }
