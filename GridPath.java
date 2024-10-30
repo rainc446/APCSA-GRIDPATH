@@ -57,12 +57,13 @@ public class GridPath {
      */
     public int sumPath(int row, int col) {
         /* to be implemented in part (b) */
-        Location start = getNextLoc(row, col);
+        Location nextPos = getNextLoc(row, col);
         int sum = 0;
 
         while (row <= rowMax && col <= colMax)
         {
-            getNextLoc(){}
+            sum += grid[nextPos.getRow()][nextPos.getCol()];
+            nextPos = getNextLoc(nextPos.getRow(), nextPos.getCol());
         }
 
         return sum;
