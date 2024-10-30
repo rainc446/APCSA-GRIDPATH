@@ -14,7 +14,14 @@ public class Main {
         System.out.println(grid.getNextLoc(1,3));
         System.out.println(grid.getNextLoc(2, 4));
         System.out.println(grid.getNextLoc(4, 3));
-        System.out.println(grid.sumPath(1,1));
+        int [][] numsTwo = {
+                {12, 30, 40, 25, 5},
+                {11, 3, 22, 15 ,43},
+                {7, 2, 9, 4, 0},
+                {8, 33, 18, 6, 1},
+        };
+        GridPath gridTwo = new GridPath(numsTwo);
+        System.out.println(gridTwo.sumPath(1,1));
 
         //test cases for part b)
 
