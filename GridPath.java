@@ -59,13 +59,15 @@ public class GridPath {
         /* to be implemented in part (b) */
         Location nextPos = getNextLoc(row, col);
         int sum = grid[row][col];
-        boolean endReached = nextPos.getRow() == rowMax && nextPos.getCol() == colMax;
-        while (!endReached) //infinite loop occuring here
+        int nextRowVal = 0;
+        int nextColVal = 0;
+        while (! (nextRowVal == rowMax && nextColVal == colMax)) //infinite loop occuring here
         {
+            nextRowVal = nextPos.getRow();
+            nextColVal = nextPos.getCol();
             sum += grid[nextPos.getRow()][nextPos.getCol()];
-            nextPos = getNextLoc(nextPos.getRow(), nextPos.getCol());
-            endReached = (nextPos.getRow() == rowMax) && (nextPos.getCol() == colMax);
-            System.out.println(endReached);
+            nextPos = getNextLoc(nextRowVal, nextColVal);
+            System.out.println();
             System.out.println(nextPos);
             System.out.println(sum);
         }
