@@ -61,12 +61,13 @@ public class GridPath {
         int sum = grid[row][col];
         int nextRowVal = 0;
         int nextColVal = 0;
-        while (! (nextRowVal == rowMax && nextColVal == colMax)) //infinite loop occuring here
+
+        while (nextRowVal < rowMax && nextColVal < colMax) //infinite loop occuring here
         {
+            nextPos = getNextLoc(nextRowVal, nextColVal);
             nextRowVal = nextPos.getRow();
             nextColVal = nextPos.getCol();
-            sum += grid[nextPos.getRow()][nextPos.getCol()];
-            nextPos = getNextLoc(nextRowVal, nextColVal);
+            sum += grid[nextRowVal][nextColVal];
             System.out.println();
             System.out.println(nextPos);
             System.out.println(sum);
