@@ -61,7 +61,7 @@ public class GridPath {
         int nextRowVal = row;
         int nextColVal = col;
 
-        while (!(nextRowVal == rowMax) &&  !(nextRowVal > colMax))
+        while (!(nextRowVal == rowMax) &&  !(nextRowVal == colMax))
         {
 
             Location nextPos = getNextLoc(nextRowVal, nextColVal);
